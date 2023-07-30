@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './FilterItem/FilterItem';
+import styles from './App.module.css'
 
 class App extends Component {
   state = {
@@ -62,12 +63,12 @@ class App extends Component {
     const filteredContacts = this.getFilteredContacts();
 
     return (
-      <div>
-        <h1>Телефонна книга</h1>
+      <div className={styles.adressBookContainer}>
+        <h1 className={styles.header}>Телефонна книга</h1>
         <ContactForm addContact={this.addContact} />
 
-        <h2>Контакти</h2>
-        <p>Пошук за іменем</p>
+        <h2 className={styles.subHeader}>Контакти</h2>
+        <p className={styles.serchHeader}>Пошук за іменем</p>
         <Filter filter={filter} onChange={this.handleFilterChange} />
         <ContactList contacts={filteredContacts} onDeleteContact={this.deleteContact} />
       </div>

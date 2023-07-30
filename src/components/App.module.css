@@ -1,0 +1,22 @@
+
+.adressBookContainer {
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #cac4c4;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+}
+
+.subHeader {
+  margin-top: 30px;
+}
+
+.serchHeader {
+  font-size: 14px;
+  margin-top: 10px;
+}
