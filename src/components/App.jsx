@@ -12,12 +12,21 @@ class App extends Component {
 
   addContact = (newContact) => {
     const { contacts } = this.state;
-    const existingContact = contacts.find(
+    const existingName = contacts.find(
       (contact) => contact.name.toLowerCase() === newContact.name.toLowerCase()
     );
 
-    if (existingContact) {
+    const existingNumber = contacts.find(
+      (contact) => contact.number === newContact.number
+    );
+
+    if (existingName) {
       alert(`Контакт з ім'ям ${newContact.name} вже присутній у телефонній книзі.`);
+      return;
+    }
+
+    if (existingNumber) {
+      alert(`Контакт з номером телефону ${newContact.number} вже присутній у телефонній книзі.`);
       return;
     }
 
