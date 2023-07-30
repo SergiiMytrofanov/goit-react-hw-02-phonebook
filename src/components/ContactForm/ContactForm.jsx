@@ -59,7 +59,7 @@ class ContactForm extends Component {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Номер телефону повинен складатися з цифр і може містити пробіли, тире, круглі дужки та починатися з +"
           required
-          placeholder="+380 000 000 00 00"
+          placeholder="+000 000 000 00 00"
           value={number}
           onChange={this.handleNumberChange}
         />

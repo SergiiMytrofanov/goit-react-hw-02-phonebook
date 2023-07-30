@@ -15,7 +15,7 @@
 
 .contactFormButton {
   padding: 8px 12px;
-  background-color: #4CAF50;
+  background-color: #337e37;
   color: white;
   border: none;
   cursor: pointer;
@@ -25,5 +25,5 @@
 
 .contactFormButton:hover,
 .contactFormButton:focus {
-  background-color: #45a049;
+  background-color: #4CAF50;
 }
