@@ -37,6 +37,7 @@ class App extends Component {
         <ContactForm addContact={this.addContact} />
 
         <h2>Контакти</h2>
+        <p>Пошук за іменем</p>
         <Filter filter={filter} onChange={this.handleFilterChange} />
         <ContactList contacts={filteredContacts} />
       </div>
