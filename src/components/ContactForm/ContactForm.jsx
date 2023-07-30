@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
+import styles from './ContactForm.module.css';
 
 class ContactForm extends Component {
   state = {
@@ -39,26 +40,30 @@ class ContactForm extends Component {
     const { name, number } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={styles.contactForm} onSubmit={this.handleSubmit}>
         <input
+          className={styles.contactFormInput}
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Ім'я може містити лише літери, апостроф, тире та пробіли. Наприклад, Адріан, Джейкоб Мерсер, Шарль де Батц де Кастельмор д'Артаньян"
           required
+          placeholder="Ім'я та Прізвище"
           value={name}
           onChange={this.handleNameChange}
         />
         <input
+          className={styles.contactFormInput}
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Номер телефону повинен складатися з цифр і може містити пробіли, тире, круглі дужки та починатися з +"
           required
+          placeholder="+380 000 000 00 00"
           value={number}
           onChange={this.handleNumberChange}
         />
-        <button type="submit">Додати контакт</button>
+        <button className={styles.contactFormButton} type="submit">Додати контакт</button>
       </form>
     );
   }
