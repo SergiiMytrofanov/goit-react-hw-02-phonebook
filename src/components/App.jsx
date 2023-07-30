@@ -11,6 +11,16 @@ class App extends Component {
   };
 
   addContact = (newContact) => {
+    const { contacts } = this.state;
+    const existingContact = contacts.find(
+      (contact) => contact.name.toLowerCase() === newContact.name.toLowerCase()
+    );
+
+    if (existingContact) {
+      alert(`Контакт з ім'ям ${newContact.name} вже присутній у телефонній книзі.`);
+      return;
+    }
+
     this.setState((prevState) => ({
       contacts: [...prevState.contacts, { ...newContact, id: nanoid() }]
     }));
