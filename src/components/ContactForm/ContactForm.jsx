@@ -45,7 +45,7 @@ class ContactForm extends Component {
           className={styles.contactFormInput}
           type="text"
           name="name"
-          pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          pattern="^[a-zA-Zа-яА-ЯёЁіІїЇєЄ]+(([' \-][a-zA-Zа-яА-ЯёЁіІїЇєЄ ])?[a-zA-Zа-яА-ЯёЁіІїЇєЄ]*)*$"
           title="Ім'я може містити лише літери, апостроф, тире та пробіли. Наприклад, Адріан, Джейкоб Мерсер, Шарль де Батц де Кастельмор д'Артаньян"
           required
           placeholder="Ім'я та Прізвище"
